@@ -1,0 +1,11 @@
+PASS	Basic Statistics	CGRL_index40_R1.fq
+PASS	Per base sequence quality	CGRL_index40_R1.fq
+PASS	Per sequence quality scores	CGRL_index40_R1.fq
+PASS	Per base sequence content	CGRL_index40_R1.fq
+PASS	Per base GC content	CGRL_index40_R1.fq
+WARN	Per sequence GC content	CGRL_index40_R1.fq
+PASS	Per base N content	CGRL_index40_R1.fq
+PASS	Sequence Length Distribution	CGRL_index40_R1.fq
+PASS	Sequence Duplication Levels	CGRL_index40_R1.fq
+PASS	Overrepresented sequences	CGRL_index40_R1.fq
+WARN	Kmer Content	CGRL_index40_R1.fq

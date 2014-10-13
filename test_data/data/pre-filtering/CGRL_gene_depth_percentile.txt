@@ -1,0 +1,16 @@
+gene depth mean: 2.29
+gene depth standard deviation: 0.85
+gene percentile:
+1 precent percentile: 1.00
+5 precent percentile: 1.33
+10 precent percentile: 1.50
+20 precent percentile: 1.67
+30 precent percentile: 1.85
+40 precent percentile: 2.02
+50 precent percentile: 2.18
+60 precent percentile: 2.35
+70 precent percentile: 2.54
+80 precent percentile: 2.80
+90 precent percentile: 3.15
+95 precent percentile: 3.48
+99 precent percentile: 4.71

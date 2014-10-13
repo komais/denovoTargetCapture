@@ -1,0 +1,2 @@
+Assembly	TotalLength	TotalContigs	Mean	Median	Max	>2000bp	>1000bp	>500bp	N25	N50	N90	GC%
+in_target	374725	1367	274	250	1167	0	1	25	327	266	210	52.21

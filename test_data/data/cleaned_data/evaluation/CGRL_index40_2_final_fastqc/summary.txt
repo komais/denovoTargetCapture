@@ -1,0 +1,11 @@
+PASS	Basic Statistics	CGRL_index40_2_final.txt
+PASS	Per base sequence quality	CGRL_index40_2_final.txt
+PASS	Per sequence quality scores	CGRL_index40_2_final.txt
+PASS	Per base sequence content	CGRL_index40_2_final.txt
+PASS	Per base GC content	CGRL_index40_2_final.txt
+WARN	Per sequence GC content	CGRL_index40_2_final.txt
+PASS	Per base N content	CGRL_index40_2_final.txt
+WARN	Sequence Length Distribution	CGRL_index40_2_final.txt
+PASS	Sequence Duplication Levels	CGRL_index40_2_final.txt
+PASS	Overrepresented sequences	CGRL_index40_2_final.txt
+WARN	Kmer Content	CGRL_index40_2_final.txt

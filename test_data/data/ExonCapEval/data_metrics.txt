@@ -1,0 +1,4 @@
+Library	rawData(Mb)	cleanedData(Mb)	DataMapped(Mb)	Specificity(%)	Sensitivity(%)	AvgCoverage(X)	CoverageVar	AvgCoverageStd	Sites2X(%)	Sites5X(%)	Sites10X(%)	Sites20X(%) 
+CGRL_index1	4.55	2.81	0.28	9.96	52.32	0.74	0.55	0.74	16.64	0.31	0.03	0.00
+CGRL_index15	4.56	2.56	0.25	9.77	48.80	0.68	0.60	0.77	14.28	0.30	0.04	0.00
+CGRL_index40	4.59	2.70	0.30	11.11	57.19	0.80	0.66	0.81	17.03	0.31	0.06	0.00

@@ -1,0 +1,164 @@
+#Time spent: 2.33 hrs
+
+library(MASS);
+data(Animals);
+body <- Animals$body;
+names(body) <- rownames(Animals);
+
+#EXERCISES
+# Exercise 1
+mean(log(Animals$brain));
+sd(log(Animals$brain));
+
+# Exercise 2
+Animals[2, 5];
+# NULL
+dim(Animals);
+# There are only 2 columns in this dataset
+
+# Exercise 3
+sum(log(2:123456));
+
+# Exercise 4
+length(which(body < 20));
+length(which(body < 100 & body > 30));
+
+# Exercise 5
+length(which(log(body) > 4));
+mean(log(body[which(log(body) > 4)]));
+
+body <- Animals$body;
+brain <- Animals$brain;
+bigbodieslogical <- body > 100;
+bigbodies <- body[bigbodieslogical];
+bigbodies;
+newbrains <- brain[ bigbodieslogical];
+newbrains;
+x <- body ==max(body);
+brain [x];
+x <- body < 10;
+newdf <- Animals[x, ];
+newdf;
+Animals[Animals$body > 10, ];
+
+#This returns an error message "no non-missing arguments to max; returning -Inf"
+Animals[Animals$brain == max(Animals$Brain), ];
+Animals[Animals$brain < 10 | Animals$body > 1000, ];
+
+AnimalsSmall <- Animals[Animals$body < median(Animals$body), ];
+AnimalsBig <- Animals[Animals$body > median(Animals$body), ];
+
+# Exercise 6
+SmallFit <- lm(log(AnimalsSmall$brain) ~ log(AnimalsSmall$body));
+summary(SmallFit);
+BigFit <- lm(log(AnimalsBig$brain) ~ log(AnimalsBig$body));
+summary(BigFit);
+# Yes the slopes differ. SmallFit is positive. BigFit is negative.
+
+# HOMEWORK
+# Question 1
+vec <- ((1:50)*10);
+
+# Question 2
+vec1 <- (1:5);
+vec2 <- (10:14);
+vec1/vec2;
+vec1*vec2;
+
+# Question 3
+vecletters <- c("R", "T", "E", "C", "V", "O");
+newvec <- vecletters[c(5,3,4,2,6,1)];
+newvec;
+
+# Question 4
+vecbrain <- Animals$brain >= 10;
+sum(vecbrain == TRUE);
+
+# Question 5
+agamids <- read.table("agamids_morphometrics.csv", header = TRUE, sep = ",");
+nrow(agamids);
+ncol(agamids);
+dim(agamids);
+
+# Question 6
+top3agamids <- agamids[1:3, ];
+midagamids <- agamids[20:25, ];
+combinedagamids <- rbind(agamids[1:3, ], agamids[20:25, ]);
+names <- rownames(combinedagamids);
+
+# Question 7
+Ctenoindex <- grep("CTENOPHORUS", rownames(agamids));
+Ctenoindex;
+length(agamids[Ctenoindex, ]);
+# 17 species in the agamids dataset is from the genus Ctenophorus
+
+# Question 8
+Diporiphora <- agamids[grep("DIPORIPHORA", rownames(agamids)), ];
+length(grep("DIPORIPHORA", rownames(agamids)));
+
+# Question 9
+Ctenophorus <- agamids[grep("CTENOPHORUS", rownames(agamids)), ]
+DFit <- lm(Diporiphora$sha ~ Diporiphora$svl);
+summary(DFit);
+CFit <- lm(Ctenophorus$sha ~ Ctenophora$svl);
+summary(CFit);
+
+# Question 10
+par(mfrow = c(2,1));
+plot (Ctenophorus$sha ~ Ctenophorus$svl, pch=19, cex=1.7, col="gray50", xlim=c(3.8, 4.8), ylim=c(2.2,3.6));
+abline(CFit, lwd=2, col="blue");
+plot(Diporiphora$sha ~ Diporiphora$svl, pch=19, cex=1.7, col="gray50", xlim=c(3.8, 4.8), ylim=c(2.2,3.6));
+abline(DFit, lwd=2, col="blue");
+
+# Question 11
+sum((agamids$svl > 4.5) == TRUE);
+sum(((agamids$svl > 4.5) == TRUE) & ((agamids$tail > 5.25) == TRUE));
+sum(((agamids$svl > 4.5) == TRUE) | ((agamids$tail > 5.25) == TRUE));
+
+# Question 12
+mean(Ctenophorus[ ,1]);
+median(Ctenophorus[ ,1]);
+sd(Ctenophorus[ ,1]);
+mean(Ctenophorus[ ,2]);
+median(Ctenophorus[ ,2]);
+sd(Ctenophorus[ ,2]);
+colnames(Ctenophorus[ , 1:2]);
+# svl and tail
+
+# Question 13
+mean(Diporiphora[ ,3]);
+median(Diporiphora[ ,3]);
+sd(Diporiphora[ ,3]);
+mean(Diporiphora[ ,6]);
+median(Diporiphora[ ,6]);
+sd(Diporiphora[ ,6]);
+mean(Diporiphora[ ,7]);
+median(Diporiphora[ ,7]);
+sd(Diporiphora[ ,7]);
+colnames(Diporiphora[ , 3:7]);
+# hdep, hw, and nd
+
+# Question 14
+rownames(agamids[max(agamids$svl), ]);
+rownames(agamids[min(agamids$svl), ]);
+
+# Question 15
+svl_unlogged <- exp(agamids$svl);
+agamids2 <- cbind(agamids, svl_unlogged);
+head(agamids2);
+agamids3 <- agamids2[(max(agamids2$svl_unlogged)-120):(max(agamids2$svl_unlogged)), ];
+nrow(agamids3);
+agamids3 <- agamids2[agamids2$svl_unlogged >=(max(agamids2$svl_unlogged)-120), ];
+nrow(agamids3);
+# 13 species
+
+# Question 16
+biogeo <- read.table("biogeography.csv", header = TRUE, sep=",");
+colnames(biogeo);
+sum(biogeo$region == 0);
+sum(biogeo$region != 1);
+sum(biogeo$region != (2 & 3));
+
+# Question 17
+packs <- c("ape", "geiger", "MASS", "Matrix", "diversitree", "nlme");
+install.packages(packs);

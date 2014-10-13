@@ -1,0 +1,140 @@
+> setwd("C:/R course/Week3")
+> 
+> #####3a)
+>  for (i in 1:9){
++  cat('*',sep='\n'); 
++  
++   }
+*
+*
+*
+*
+*
+*
+*
+*
+*
+>   
+> #####3b)
+>   for (i in 1:9){
++  cat('*','#'); 
++  
++   }
+* #* #* #* #* #* #* #* #* #>   
+> #####3c)
+> #it is just being squared each time
+> 
+> ######4) and 5 and 6 are in hand on worksheet
+> 
+> nameVector<-c('Charlie','Helga','Clancy','Matilda','Jones');
+> for (i in 1:length(nameVector)) {
++ cat('Nice to meet you,',nameVector[i], '\n');
++ }
+Nice to meet you, Charlie 
+Nice to meet you, Helga 
+Nice to meet you, Clancy 
+Nice to meet you, Matilda 
+Nice to meet you, Jones 
+> 
+> compounded<-rep(0,length(bankAccounts));
+> bankAccounts<-c(10,9.2,5.6,3.7,8.8,0.5);
+> interestRate<-0.0525;
+> for(i in 1:length(bankAccounts))
++ {
++           compounded[i]<-interestRate*bankAccounts[i]+bankAccounts[i];
++ }
+> 
+> 
+> ###### 7)
+> set.seed(1);
+> sumThis <- rnorm(10);
+> sumvariable<- 0;
+> for (i in 1:length(sumThis))
++ {
++ sumvariable<-sumvariable+sumThis[i];
++ 
++ }
+> sumvariable
+[1] 1.322028
+> 
+> sum(sumThis)
+[1] 1.322028
+> 
+> ###### 8)a
+> for (i in 1:7){
++  cat(letters[i]); 
++  
++   }
+abcdefg> 
+> ###### 8)b
+> for (i in 7:1){
++  cat(letters[i]); 
++  
++   }
+gfedcba> 
+> 
+> ###### 8)c
+> for (i in 1:7){
++  cat(letters[i],' '); 
++  
++   }
+a  b  c  d  e  f  g  > 
+> 
+> ###### 9)
+> # don't know how to do this one.
+> 
+>  
+> ###### 10)
+> Fib<-c(1:17);
+> Fib[1]<-0;
+> Fib[2]<-1;
+> 
+> for (i in 3:17)
++ {
++ 
++ Fib[i]<-Fib[i-1]+Fib[i-2];
++ cat('Fib number', i, 'is', Fib[i],'\n'); 
++ }
+Fib number 3 is 1 
+Fib number 4 is 2 
+Fib number 5 is 3 
+Fib number 6 is 5 
+Fib number 7 is 8 
+Fib number 8 is 13 
+Fib number 9 is 21 
+Fib number 10 is 34 
+Fib number 11 is 55 
+Fib number 12 is 89 
+Fib number 13 is 144 
+Fib number 14 is 233 
+Fib number 15 is 377 
+Fib number 16 is 610 
+Fib number 17 is 987 
+> 
+> ###### 11)
+> bankAccounts<-c(10,9.2,5.6);
+> interestRate<-0.0525;
+> house<-c(4.8,3.8,5.7);
+> food<-c(3.5,4.3,5.0);
+> fun<-c(7.8,2.1,10.5);
+> income<-c(21,21,21);
+> 
+> for(j in 1:5)
++ {
++ for(i in 1:length(bankAccounts))
++ {
++ bankAccounts[i]<-(income[i]-fun[i]-house[i]-food[i])+interestRate*bankAccounts[i]+bankAccounts[i]
++ }
++ print(bankAccounts)
++ }
+[1] 15.425 20.483  5.694
+[1] 21.134812 32.358357  5.792935
+[1] 27.144390 44.857171  5.897064
+[1] 33.46947 58.01217  6.00666
+[1] 40.12662 71.85781  6.12201
+> 
+> 
+> 
+> 
+> 
+> 

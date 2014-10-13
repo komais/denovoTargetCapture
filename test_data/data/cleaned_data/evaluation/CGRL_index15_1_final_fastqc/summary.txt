@@ -1,0 +1,11 @@
+PASS	Basic Statistics	CGRL_index15_1_final.txt
+PASS	Per base sequence quality	CGRL_index15_1_final.txt
+PASS	Per sequence quality scores	CGRL_index15_1_final.txt
+WARN	Per base sequence content	CGRL_index15_1_final.txt
+PASS	Per base GC content	CGRL_index15_1_final.txt
+FAIL	Per sequence GC content	CGRL_index15_1_final.txt
+PASS	Per base N content	CGRL_index15_1_final.txt
+WARN	Sequence Length Distribution	CGRL_index15_1_final.txt
+PASS	Sequence Duplication Levels	CGRL_index15_1_final.txt
+WARN	Overrepresented sequences	CGRL_index15_1_final.txt
+FAIL	Kmer Content	CGRL_index15_1_final.txt

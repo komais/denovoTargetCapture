@@ -1,0 +1,16 @@
+site depth mean: 2.38
+site depth standard deviation: 1.62
+site_percentile:
+1 precent percentile: 1.00
+5 precent percentile: 1.00
+10 precent percentile: 1.00
+20 precent percentile: 1.00
+30 precent percentile: 2.00
+40 precent percentile: 2.00
+50 precent percentile: 2.00
+60 precent percentile: 2.00
+70 precent percentile: 3.00
+80 precent percentile: 3.00
+90 precent percentile: 4.00
+95 precent percentile: 5.00
+99 precent percentile: 7.00

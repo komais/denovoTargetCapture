@@ -1,0 +1,145 @@
+rm(list=ls());
+for (k in 2:4){#
+	ngens<-0#
+	for (i in 1:1000){#
+		maxpopsize <- 10000;#
+		currpopsize <- 20;#
+		popvector <- currpopsize;#
+		set.seed(1);#
+			while (currpopsize < maxpopsize){#
+				offspring <- rgeom(curr_pop_size, 1/(k+1));#
+				currpopsize <- sum(offspring);#
+				popvector <- c(popvector, currpopsize);#
+			}#
+		ngens<-c(ngens,length(popvector))#
+	}#
+	cat("For progeny =",k,"mean numbers gens =",mean(ngens),sep="\n")#
+}
+for (k in 2:4){#
+	ngens<-0#
+	for (i in 1:1000){#
+		maxpopsize <- 10000;#
+		currpopsize <- 20;#
+		popvector <- currpopsize;#
+		set.seed(1);#
+			while (currpopsize < maxpopsize){#
+				offspring <- rgeom(currpopsize, 1/(k+1));#
+				currpopsize <- sum(offspring);#
+				popvector <- c(popvector, currpopsize);#
+			}#
+		ngens<-c(ngens,length(popvector))#
+	}#
+	cat("For progeny =",k,"mean numbers gens =",mean(ngens),sep="\n")#
+}
+for (k in 2:4){#
+	ngens<-0#
+	for (i in 1:1000){#
+		maxpopsize <- 10000;#
+		currpopsize <- 20;#
+		popvector <- currpopsize;#
+		set.seed(1);#
+			while (currpopsize < maxpopsize){#
+				offspring <- rgeom(currpopsize, 1/(k+1));#
+				currpopsize <- sum(offspring);#
+				popvector <- c(popvector, currpopsize);#
+			}#
+		ngens<-c(ngens,length(popvector))#
+	}#
+	cat("For progeny =",k,"mean numbers gens =",mean(ngens),sep=" ", '\n')#
+}
+print(ngens);
+#
+for (k in 2:4){#
+	ngens<-0#
+	for (i in 1:1000){#
+		maxpopsize <- 10000;#
+		currpopsize <- 20;#
+		popvector <- currpopsize;#
+		set.seed(1);#
+			while (currpopsize < maxpopsize){#
+				offspring <- rgeom(currpopsize, 1/(k+1));#
+				currpopsize <- sum(offspring);#
+				popvector <- c(popvector, currpopsize);#
+			}#
+		ngens<-c(ngens,length(popvector))#
+	}#
+	cat("For progeny =",k,"mean number of gens =", mean((ngens-1)), sep=" ", '\n')#
+}
+for (k in 2:4){#
+	ngens<-numeric(1000);#
+	for (i in 1:1000){#
+		maxpopsize <- 10000;#
+		currpopsize <- 20;#
+		popvector <- currpopsize;#
+		set.seed(1);#
+			while (currpopsize < maxpopsize){#
+				offspring <- rgeom(currpopsize, 1/(k+1));#
+				currpopsize <- sum(offspring);#
+				popvector <- c(popvector, currpopsize);#
+			}#
+		ngens[i]<-length(popvector);#
+	}#
+	cat("For progeny =",k,"mean number of gens =", mean(ngens), sep=" ", '\n')#
+}
+for (i in 1:1000){#
+		maxpopsize<-10000;#
+		currpopsize<-20;#
+		popvector<-currpopsize#
+		while(currpopsize<maxpopsize){#
+			offspring<-rgeom(currpopsize, 0.2);#
+			currpopsize<-sum(offspring);#
+			popvector<-c(popvector, currpopsize);#
+	}#
+		ngen4[i]<-length(popvector);	#
+}#
+cat('For progeny = 4, mean number gens =', mean(ngen4), sep=' ');
+ngen4<-numeric(1000);#
+set.seed(1);#
+#
+for (i in 1:1000){#
+		maxpopsize<-10000;#
+		currpopsize<-20;#
+		popvector<-currpopsize#
+		while(currpopsize<maxpopsize){#
+			offspring<-rgeom(currpopsize, 0.2);#
+			currpopsize<-sum(offspring);#
+			popvector<-c(popvector, currpopsize);#
+	}#
+		ngen4[i]<-length(popvector);	#
+}#
+cat('For progeny = 4, mean number gens =', mean(ngen4), sep=' ');
+for (k in 2:4){#
+#
+	for (i in 1:1000){#
+		ngens<-numeric(1000);#
+		maxpopsize <- 10000;#
+		currpopsize <- 20;#
+		popvector <- currpopsize;#
+		set.seed(1);#
+			while (currpopsize < maxpopsize){#
+				offspring <- rgeom(currpopsize, 1/(k+1));#
+				currpopsize <- sum(offspring);#
+				popvector <- c(popvector, currpopsize);#
+			}#
+		ngens[i]<-length(popvector);#
+	}#
+	cat("For progeny =",k,"mean number of gens =", mean(ngens), sep=" ", '\n')#
+}
+#
+for (k in 2:4){#
+	ngens<-numeric(1000);#
+	#
+	for (i in 1:1000){#
+		maxpopsize <- 10000;#
+		currpopsize <- 20;#
+		popvector <- currpopsize;#
+		set.seed(1);#
+			while (currpopsize < maxpopsize){#
+				offspring <- rgeom(currpopsize, 1/(k+1));#
+				currpopsize <- sum(offspring);#
+				popvector <- c(popvector, currpopsize);#
+			}#
+		ngens[i]<-length(popvector);#
+	}#
+	cat("For progeny =",k,"mean number of gens =", mean(ngens), sep=" ", '\n')#
+}
